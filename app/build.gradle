@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "ir.applika.myapplication"
+        minSdkVersion 15
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'com.android.support:support-annotations:28.0.0'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    testImplementation 'org.mockito:mockito-core:2.19.0'
+    implementation "com.squareup.okhttp3:mockwebserver:3.8.1"
+
+    // RxAndroid
+    def rxandroid_version = '2.1.1'
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+
+    // RxJava
+    def rxjava_version = '2.1.1'
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+
+    // Rx-Retrofit Call Adapter
+    def rxcalladapter_version = '2.5.0'
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rxcalladapter_version" // Retrofit call adapter
+
+    // Reactive Streams (convert Observable to LiveData)
+    def reactivestreams_version = "1.1.1"
+    implementation "android.arch.lifecycle:reactivestreams:$reactivestreams_version"
+
+    // Dagger
+    def dagger_version = "2.22"
+    // def dagger_version = "2.16" // version used by google samples
+
+    // Dagger2 core
+    implementation "com.google.dagger:dagger:$dagger_version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
+
+    // Dagger Android
+    implementation "com.google.dagger:dagger-android:$dagger_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger_version"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$dagger_version"
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.23.2'
+
+    // Data binding
+    def nav_version = "2.2.0-alpha03"
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+    def material_version = "1.0.0"
+    implementation "com.google.android.material:material:$material_version"
+
+    // Retrofit
+    def retrofitVersion = "2.5.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    // ViewModel and LiveData
+    def lifecycle_version = '2.1.0-alpha03'
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+}
