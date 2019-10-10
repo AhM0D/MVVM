@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/layout"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:layoutDirection="rtl"
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        app:cardCornerRadius="4dp"
+        android:id="@+id/card"
+        app:cardBackgroundColor="#f0dee2"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="13dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="14dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/stevejobs" />
+
+            <com.thebrownarrow.customfont.CustomFontTextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageView"
+                android:layout_toEndOf="@+id/imageView"
+                android:layout_toRightOf="@+id/imageView"
+                android:text="استیو جابز"
+                android:textColor="#2e2d2f"
+                android:layout_marginLeft="10dp"
+                android:textSize="16dp"
+                app:custom_typeface="@string/font_bold" />
+
+            <com.thebrownarrow.customfont.CustomFontTextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView"
+                android:layout_alignStart="@+id/textView"
+                android:layout_below="@+id/textView"
+                android:layout_marginTop="10dp"
+                android:text="والتر ایزاکسن"
+                android:visibility="gone"
+                android:textColor="#9d9b9f"
+                android:textSize="11.5dp"
+                app:custom_typeface="@string/font_medium" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageView"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@+id/imageView"
+                android:layout_toRightOf="@+id/imageView"
+                style="?android:attr/ratingBarStyleSmall"
+                android:rating="3.5"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@+id/ratingBar"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="13dp"
+                android:layout_marginRight="13dp"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="7dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/shoppingbag"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+
+        <com.thebrownarrow.customfont.CustomFontTextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:text="نگاه نزدیک تر"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="18dp"
+            app:custom_typeface="@string/font_bold" />
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:id="@+id/image"
+                />
+
+            <com.thebrownarrow.customfont.CustomFontTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#4f4f4f"
+                android:layout_toEndOf="@+id/image"
+                android:layout_toRightOf="@+id/image"
+                app:custom_typeface="@string/font_bold"
+                android:text="استیو جابز" />
+
+            <com.thebrownarrow.customfont.CustomFontTextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textView2"
+                android:layout_alignRight="@+id/textView2"
+                android:visibility="gone"
+                android:layout_below="@+id/textView2"
+                android:layout_marginLeft="15dp"
+                app:custom_typeface="@string/font_medium"
+                android:text="والتر ایزاکسون" />
+
+            <RatingBar
+                android:id="@+id/ratingBar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:layout_toEndOf="@+id/image"
+                android:visibility="gone"
+                android:layout_toRightOf="@+id/image"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:rating="3.5"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/download"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="10dp"
+                android:layout_alignBottom="@+id/image"
+                android:layout_toEndOf="@+id/image"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/image"
+                app:cardBackgroundColor="#66bb6a"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.thebrownarrow.customfont.CustomFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#fff"
+                        android:textSize="12dp"
+                        android:layout_centerVertical="true"
+                        app:custom_typeface="@string/font_bold"
+                        android:text="مشاهده" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/button2"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="10dp"
+                android:layout_alignTop="@+id/download"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/download"
+                android:layout_toRightOf="@+id/download"
+                app:cardBackgroundColor="#536dfe"
+               >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.thebrownarrow.customfont.CustomFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="12dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        app:custom_typeface="@string/font_bold"
+                        android:text="رایگان"
+                        android:id="@+id/price" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="20dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_alignTop="@+id/price"
+                        android:layout_toEndOf="@+id/price"
+                        android:layout_toRightOf="@+id/price"
+                        app:srcCompat="@drawable/shoppingbag" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/title"
+                android:layout_alignStart="@+id/title"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="22dp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/progressBar2"
+                android:layout_alignRight="@+id/progressBar2"
+                android:layout_below="@+id/progressBar2"
+                android:text="" />
+
+        </RelativeLayout>
+        <com.thebrownarrow.customfont.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#536dfe"
+            android:textSize="14dp"
+            android:layout_centerVertical="true"
+            app:custom_typeface="@string/font_medium"
+android:text="کتاب کمتر از ۳ ماه پس از انتشار به پرفروشترین کتاب جهان تبدیل شد و رکورد فروش همه زندگی‌نامه‌ها را شکست. "
+            android:id="@+id/content" />
+        <com.thebrownarrow.customfont.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#616161"
+            android:visibility="gone"
+            android:textSize="14dp"
+            android:layout_centerVertical="true"
+            app:custom_typeface="@string/font_light"
+            android:text="زندگی نامه استیو جابز نام کتاب زندگی نامه رسمی استیو جابز است که به درخواست خود او و توسط زندگی‌نامه نویس مشهور، والتر ایزاکسون، نوشته شده‌است. این زندگی‌نامه حاصل بیش از چهل مصاحبه با جابز و صدها مصاحبه با اعضای خانواده، دوستان، دشمنان، رقبا و همکاران اوست که طی مدت دو سال انجام شده‌است."
+            android:id="@+id/customFontTextView3" />
+
+        <com.thebrownarrow.customfont.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#000"
+            android:textSize="16dp"
+            android:layout_centerVertical="true"
+            android:text="بیشتر"
+            android:visibility="gone"
+            app:custom_typeface="@string/font_bold"
+            android:id="@+id/customFontTextView4" />
+
+        <com.thebrownarrow.customfont.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#585959"
+            android:textSize="16dp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:text="همانند ها"
+            app:custom_typeface="@string/font_medium"
+            android:id="@+id/customFontTextView5" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            android:layoutDirection="rtl"
+            android:id="@+id/rv"
+            />
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+</layout>
