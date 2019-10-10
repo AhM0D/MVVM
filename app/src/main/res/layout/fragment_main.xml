@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:background="@color/colorPrimary"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent"
+
+    tools:context=".view.activity.MainActivity">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    >
+    <com.thebrownarrow.customfont.CustomFontTextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="خانه"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:custom_typeface="@string/font_bold" />
+    <com.thebrownarrow.customfont.CustomFontTextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="29dp"
+        android:gravity="right"
+        android:layout_marginRight="29dp"
+        android:layout_marginTop="25dp"
+        android:text="کتابهای پیشنهادی"
+        android:textColor="#757575"
+        android:textSize="14dp"
+        app:custom_typeface="@string/font_bold" />
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginTop="5dp"
+        android:layoutDirection="rtl"
+        />
+    <com.thebrownarrow.customfont.CustomFontTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="29dp"
+        android:gravity="right"
+        android:layout_marginRight="29dp"
+        android:layout_marginTop="5dp"
+        android:text="جدیدترین ها"
+        android:textColor="#757575"
+        android:textSize="14dp"
+        app:custom_typeface="@string/font_bold" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layoutDirection="rtl"
+        android:id="@+id/rv"
+        android:layout_marginBottom="20dp"
+        />
+    <com.thebrownarrow.customfont.CustomFontTextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="29dp"
+        android:gravity="right"
+        android:layout_marginRight="29dp"
+        android:layout_marginTop="15dp"
+        android:text="کتابهای پرفروش"
+        android:textColor="#757575"
+        android:textSize="14dp"
+        app:custom_typeface="@string/font_bold" />
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager1"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:layoutDirection="rtl"
+        />
+</LinearLayout>
+
+   </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/search_layout"
+        android:background="#fff"
+        android:visibility="gone"
+        android:padding="20dp"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rv_search"
+            />
+    </RelativeLayout>
+</RelativeLayout>
+</layout>

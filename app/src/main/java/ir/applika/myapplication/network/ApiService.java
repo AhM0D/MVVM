@@ -9,6 +9,6 @@ import retrofit2.http.GET;
  * Created by AhmadKing ;)
  */
 public interface ApiService {
-    @GET("getInfo")
+    @GET("db")
     Flowable<ResponseBody> getInfo();
 }

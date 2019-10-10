@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="ir.applika.myapplication.view.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_bookReviewFragment"
+            app:destination="@id/bookReviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookReviewFragment"
+        android:name="ir.applika.myapplication.view.fragment.BookReviewFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <argument
+            android:name="price"
+            android:defaultValue="loading"/>
+        <argument
+            android:name="content"
+            android:defaultValue="loading" />
+        <argument
+            android:name="title"
+            android:defaultValue="loading" />
+        <argument
+            android:name="thumbnail"
+            android:defaultValue="loading" />
+        <argument
+            android:name="downloadLink"
+            android:defaultValue="loading" />
+        <action
+            android:id="@+id/action_bookReviewFragment_to_showPdfFragment"
+            app:destination="@id/showPdfFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showPdfFragment"
+        android:name="ir.applika.myapplication.view.fragment.ShowPdfFragment"
+        android:label="ShowPdfFragment" >
+        <argument
+            android:name="file"
+            android:defaultValue="loading" />
+
+    </fragment>
+</navigation>

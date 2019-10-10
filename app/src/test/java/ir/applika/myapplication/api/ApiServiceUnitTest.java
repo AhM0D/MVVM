@@ -12,7 +12,6 @@ import io.reactivex.schedulers.Schedulers;
 import ir.applika.myapplication.models.ResponseBody;
 import ir.applika.myapplication.network.ApiConstants;
 import ir.applika.myapplication.network.ApiService;
-import ir.applika.myapplication.network.RequestInterceptor;
 import ir.applika.myapplication.network.Resource;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
@@ -39,7 +38,6 @@ public class ApiServiceUnitTest {
                 .build()
                 .create(ApiService.class);
     }
-
     @Test
     public void getInfo() {
         apiService.getInfo()

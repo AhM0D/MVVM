@@ -24,8 +24,4 @@ public class MainViewModel extends ViewModel {
     public void getInfo(){
     ResponseBodyLiveData = repository.getInfo();
     }
-
-
-
-
 }

@@ -8,14 +8,12 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import ir.applika.myapplication.network.ApiConstants;
-import ir.applika.myapplication.network.ApiService;
-import ir.applika.myapplication.network.RequestInterceptor;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-@Module(includes = ViewModelModule.class)
+@Module
 public class AppModule {
 
     @Provides
@@ -25,13 +23,12 @@ public class AppModule {
         okHttpClient.connectTimeout(ApiConstants.CONNECT_TIMEOUT, TimeUnit.MILLISECONDS);
         okHttpClient.readTimeout(ApiConstants.READ_TIMEOUT, TimeUnit.MILLISECONDS);
         okHttpClient.writeTimeout(ApiConstants.WRITE_TIMEOUT, TimeUnit.MILLISECONDS);
-        okHttpClient.addInterceptor(new RequestInterceptor());
         return okHttpClient.build();
     }
 
     @Provides
     @Singleton
-    ApiService provideRetrofit(OkHttpClient okHttpClient) {
+    Retrofit provideRetrofit(OkHttpClient okHttpClient) {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(ApiConstants.BASE_URL)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
@@ -39,6 +36,6 @@ public class AppModule {
                 .client(okHttpClient)
                 .build();
 
-        return retrofit.create(ApiService.class);
+        return retrofit;
     }
 }
